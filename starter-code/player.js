@@ -24,7 +24,7 @@ function Player (x, y, board) {
         } 
         
         if (newCoordY >= 750){
-            clearInterval(timerId)
+            clearInterval(timerIdPlayer)
         }
 
     }
