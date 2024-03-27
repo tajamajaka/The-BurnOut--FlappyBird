@@ -1,11 +1,15 @@
 let board = document.getElementById('board');
 let player = new Player(200, 400, board);
+let obstaculo = new Obstaculo(100, 600, 50, 100, board)
 
 var timerId;
 
 function startGame (){
     player.insertPlayer();
+    obstaculo.insertObstaculos();
 }
+
+
 
 
 window.addEventListener("keydown", function(e) {

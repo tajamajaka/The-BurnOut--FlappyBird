@@ -14,3 +14,10 @@
     z-index: 1
 }
 
+.obstaculo{
+    width: 50px;
+    height: 200px;
+    background-color: grey;
+    margin: 0 auto;
+    position: absolute;
+}
