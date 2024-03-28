@@ -1,20 +1,39 @@
 let board = document.getElementById('board');
-
-var timerIdPlayer;
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
-
-var timerIdMoverObstaculos;
 let obstaculosArray = []
-//Argumentos Obstaculo (x, y, width, height, board)
-let obstaculo = new Obstaculo(650, 0, 50, 100, board, obstaculosArray)
 
+let timerIdPlayer;
+let timerIdCrearObstaculo;
+let timerIdMoverObstaculos;
 
 
 function startGame (){
     player.insertPlayer();
-    obstaculo.insertObstaculos();
+    setInterval(crearObstaculo, 2000)
 }
+
+function crearObstaculo (){
+    //calcula altura random obstaculo SUP:
+    var altObstaculo = (Math.floor(Math.random()* 600)) + 100
+    
+    // calcula altura obstaculo INF:
+    var altObstaculoEspejo =  800 - altObstaculo - 100 
+    
+    //Obstaculo (x, y, width, height, board)
+    let obstaculo = new Obstaculo(650, 0, 50, altObstaculo, board, obstaculosArray)
+    obstaculo.insertObstaculos()
+    obstaculosArray.push(obstaculo)
+    console.log(obstaculosArray)
+}
+
+function limpiarTimers(){
+    clearInterval(timerIdPlayer)
+    clearInterval(timerIdCrearObstaculo)
+    clearInterval(timerIdMoverObstaculos)
+}
+
+
 
 
 window.addEventListener("keydown", function(e) {
