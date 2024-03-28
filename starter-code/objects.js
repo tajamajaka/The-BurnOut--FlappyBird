@@ -39,6 +39,7 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
 
     this.moverObstaculos = function(){
         let newCoordX = self.x + self.speed * self.direction;
+        self.checkCollision()
         if (newCoordX <= 700 && newCoordX >= -50){
             self.x = newCoordX
             self.tuboSuperior.style.left = self.x + 'px';
@@ -59,7 +60,16 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     }
 
     this.checkCollision = function(){
-        
+        //console.log(this.tuboInferior.style)
+        if (self.x + self.width >= player.x && 
+            self.x <= player.x + player.width && 
+            self.y + self.height >= player.y && 
+            self.y <= player.y + player.height){
+            console.log("Auuccchhhhh")
+            player.isDead = true
+            clearInterval(timerIdMoverObstaculos)
+            debugger
+        }
     }
 
 

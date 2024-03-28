@@ -10,8 +10,37 @@ let timerIdMoverObstaculos;
 
 function startGame (){
     player.insertPlayer();
-    setInterval(crearObstaculo, 2000)
+    timerIdPlayer = setInterval(playerMove, 100)
+    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 2000)
 }
+
+function playerMove(){
+    if (player.isDead === false){
+        player.move()
+    }
+    else{
+        clearInterval(timerIdPlayer)
+        clearInterval(timerIdMoverObstaculos)
+        clearInterval(timerIdCrearObstaculo)
+        clearInterval(timerIdCrearObstaculos2)
+        obstaculosArray.forEach(function(obstaculo){
+            clearInterval(obstaculo.timerIdMoverObstaculo)
+            clearInterval(obstaculo.timerIdMoverObstaculos)
+        })
+        alert("Game Over")
+        board.style.display = 'none'
+        /*
+        endGame.style.display = 'block
+        */
+    }
+}
+
+
+
+
+
+
+
 
 function crearObstaculo (){
     //calcula altura random obstaculo SUP:
@@ -27,20 +56,11 @@ function crearObstaculo (){
     console.log(obstaculosArray)
 }
 
-function limpiarTimers(){
-    clearInterval(timerIdPlayer)
-    clearInterval(timerIdCrearObstaculo)
-    clearInterval(timerIdMoverObstaculos)
-}
-
-
-
 
 window.addEventListener("keydown", function(e) {
     switch(e.key){
         case "w":
             player.direction = -1
-            player.move()
             break
     }
 })
@@ -50,7 +70,6 @@ window.addEventListener("keyup", function(e) {
     switch(e.key){
         case "w":
             player.direction = 1
-            timerIdPlayer = setInterval(player.move, 100)
             break
     }
 })
