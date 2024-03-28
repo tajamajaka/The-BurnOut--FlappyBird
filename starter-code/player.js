@@ -19,14 +19,16 @@ function Player (x, y, board) {
     this.move = function () {
         let newCoordY = self.y + self.speed * self.direction;
 
-        if(newCoordY <= 800 && newCoordY >= 0){
+        if(newCoordY <= 750 && newCoordY >= 0){
             self.y = newCoordY;
             self.sprite.style.top = self.y + 'px';
         } 
-        
+/*         
         if (newCoordY >= 750){
+            player.isDead = true
             clearInterval(timerIdPlayer)
-        }
+
+        } */
 
     }
 }
