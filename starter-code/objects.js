@@ -3,8 +3,10 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     this.x = x //Ṕosición eje x
     this.y = y //Posiciónn eje Y
     this.width = width
-    this.height = height 
+    this.height = height
     this.espacio = 200
+    this.altObstaculoEspejo = (800 - this.height) - this.espacio
+    this.yINF = this.height + this.espacio
     this.direction = -1
     this.speed = 10
     this.sprite
@@ -23,14 +25,12 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
         board.appendChild(this.tuboSuperior)
 
         // genera el div para el obstaculo INF
-        //var altObstaculoEspejo =  800 - altObstaculo - this.height
-        var altObstaculoEspejo =  800 - this.height
         self.tuboInferior.setAttribute('class', 'obstaculo');
-        self.tuboInferior.style.top = (this.height + 200) + 'px';
+        self.tuboInferior.style.top = this.yINF + 'px';
         self.tuboInferior.style.left = this.x + 'px';
-        self.tuboInferior.style.height = (altObstaculoEspejo - 200) + 'px';
+        self.tuboInferior.style.height = this.altObstaculoEspejo + 'px';
         self.tuboInferior.style.backgroundColor = 'red';
-        board.appendChild(self.tuboInferior);
+        board.appendChild(this.tuboInferior);
 
         //guaradamos los Obstaculos en un array para poderlos eliminar posteriormente
         this.sprite = [self.tuboSuperior, self.tuboInferior];
@@ -59,15 +59,20 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     }
 
     this.checkCollision = function(){
-        //console.log(this.tuboInferior.style)
-        if (self.x + self.width >= player.x && 
+        if (
+            (self.x + self.width >= player.x && 
             self.x <= player.x + player.width && 
             self.y + self.height >= player.y && 
-            self.y <= player.y + player.height){
+            self.y <= player.y + player.height)
+            ||
+            (self.x + self.width >= player.x && 
+            self.x <= player.x + player.width &&
+            self.yINF + self.height >= player.y && 
+            self.yINF <= player.y + player.height)
+            ){
             console.log("Auuccchhhhh")
             player.isDead = true
             clearInterval(timerIdMoverObstaculos)
-            debugger
         }
     }
 
