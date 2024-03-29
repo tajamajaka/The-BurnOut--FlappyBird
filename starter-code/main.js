@@ -1,4 +1,6 @@
 let board = document.getElementById('board');
+let marco = document.getElementsByClassName('marco');
+console.log(marco)
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
@@ -28,7 +30,9 @@ function playerMove(){
             clearInterval(obstaculo.timerIdMoverObstaculos)
         })
         alert("Game Over")
-        board.style.display = 'none'
+        /* board.style.display = 'none';
+        marco[0].style.display = 'none';
+        marco[1].style.display = 'none'; */
         /*
         endGame.style.display = 'block
         */
