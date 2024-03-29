@@ -23,8 +23,13 @@ function Player (x, y, board) {
             self.y = newCoordY;
             self.sprite.style.top = self.y + 'px';
         } 
-/*         
-        if (newCoordY >= 750){
+        // else if (newCoordY > 750){
+        // player.isDead = true
+        // clearInterval(timerIdPlayer)
+
+        // }
+/*      
+        if (newCoordY > 750){
             player.isDead = true
             clearInterval(timerIdPlayer)
 
