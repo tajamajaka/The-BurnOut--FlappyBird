@@ -1,36 +1,30 @@
 body{
-    margin-top: 5%;
-    margin-left: 40%;
-    background-color: rgb(81, 80, 80);
+    margin: 0;
+    display: flex;
 }
 
 #board {
     width: 700px;
     height: 800px;
-    background-image: url(../Images/pixil-frame-0.png);
-    background-size: cover;
+    background-color: black;
     margin: 0 auto;
-    border: 8px solid #b2b2b2;
-    border-radius: 8px;
     position: relative;
     display: inline;
 }
 
 #player {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    /*background-color: blue;*/
-    background-image: url(../Images/girl.png);
+    background-color: white;
+    background-image: url(../images/player1.gif);
     background-size: cover;
-    z-index: 1
+    z-index: 1;
 }
 
 .obstaculo{
     width: 50px;
     height: 200px;
-    /*background-image: url(../Images/fire.png);*/
-    /*background-size: cover;*/
     background-color: grey;
     margin: 0 auto;
     position: absolute;

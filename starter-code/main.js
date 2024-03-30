@@ -48,19 +48,10 @@ function playerMove(){
 
 function crearObstaculo (){
     //calcula altura random obstaculo SUP:
-    /* altObstaculo contiene la altura del obstaculo superior
-    para su cálculo se considera que el tamaño del canvas
-    es de 800 píxeles, que la apertura es de 200 píxeles
-    y que se desea reservar una altura mínima de 50 píxeles
-    para el obstáculo inferior.
-    Por ello, se elige un valor aleatorio entre 0 y 550
-    píxeles.
-    800 - 550 - 200 = 50 */
-    var altObstaculo = (Math.floor(Math.random()* 550)) 
-
+    var altObstaculo = (Math.floor(Math.random()* 600)) + 100
     
     // calcula altura obstaculo INF:
-    //var altObstaculoEspejo =  800 - altObstaculo - 100 
+    var altObstaculoEspejo =  800 - altObstaculo - 100 
     
     //Obstaculo (x, y, width, height, board)
     let obstaculo = new Obstaculo(650, 0, 50, altObstaculo, board, obstaculosArray)
