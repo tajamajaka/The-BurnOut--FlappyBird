@@ -30,12 +30,10 @@ function playerMove(){
             clearInterval(obstaculo.timerIdMoverObstaculos)
         })
         alert("Game Over")
-        /* board.style.display = 'none';
+        board.style.display = 'none';
         marco[0].style.display = 'none';
-        marco[1].style.display = 'none'; */
-        /*
-        endGame.style.display = 'block
-        */
+        marco[1].style.display = 'none';
+        endGame.style.display = 'block';
     }
 }
 
