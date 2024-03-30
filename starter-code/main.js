@@ -4,6 +4,10 @@ console.log(marco)
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
+let start = document.getElementById('start');
+let buttonStart = document.getElementById('btn-start');
+let restart = document.getElementById('restart');
+let buttonEnd = document.getElementById('btn-restart');
 
 let timerIdPlayer;
 let timerIdCrearObstaculo;
@@ -29,21 +33,15 @@ function playerMove(){
             clearInterval(obstaculo.timerIdMoverObstaculo)
             clearInterval(obstaculo.timerIdMoverObstaculos)
         })
+
         alert("Game Over")
-        /* board.style.display = 'none';
-        marco[0].style.display = 'none';
-        marco[1].style.display = 'none'; */
-        /*
-        endGame.style.display = 'block
-        */
+        board.style.display = 'none'
+        restart.style.display = 'block'
+        
+    
+        
     }
 }
-
-
-
-
-
-
 
 
 function crearObstaculo (){
@@ -69,6 +67,17 @@ function crearObstaculo (){
     console.log(obstaculosArray)
 }
 
+buttonStart.addEventListener('click', function(e){
+    start.style.display = 'none' // Así una vez hagas click en el botón start, este desaparece
+    board.style.display = 'block' //Una vez hago click en el botón start aparece el juego. 
+    restart.style.display = 'none'
+})
+
+buttonEnd.addEventListener('click', function(e){
+    start.style.display = 'block' // Así una vez hagas click en el botón start, este desaparece
+    board.style.display = 'none' //Una vez hago click en el botón start aparece el juego. 
+    restart.style.display = 'none'
+})
 
 window.addEventListener("keydown", function(e) {
     switch(e.key){
