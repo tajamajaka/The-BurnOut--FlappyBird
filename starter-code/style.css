@@ -13,6 +13,7 @@ body{
     border: 8px solid #b2b2b2;
     border-radius: 8px;
     position: relative;
+    display: inline;
 }
 
 #player {
@@ -33,4 +34,13 @@ body{
     background-color: grey;
     margin: 0 auto;
     position: absolute;
+}
+
+.marco{
+    width: 33vw;
+    height: 800px;
+    background-color: green;
+    z-index: 1;
+    display: inline;
+
 }
