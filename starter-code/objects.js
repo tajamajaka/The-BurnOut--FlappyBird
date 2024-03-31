@@ -19,21 +19,26 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
 
         // genera el div para el obstaculo SUP
         this.tuboSuperior.setAttribute('class', 'obstaculo')
+        this.tuboSuperior.setAttribute('id', 'obstaculoSup');
         this.tuboSuperior.style.top = this.y + 'px'
         this.tuboSuperior.style.left = this.x + 'px'
         this.tuboSuperior.style.height = this.height + 'px'
         board.appendChild(this.tuboSuperior)
 
         // genera el div para el obstaculo INF
-        self.tuboInferior.setAttribute('class', 'obstaculo');
-        self.tuboInferior.style.top = this.yINF + 'px';
-        self.tuboInferior.style.left = this.x + 'px';
-        self.tuboInferior.style.height = this.altObstaculoEspejo + 'px';
-        self.tuboInferior.style.backgroundColor = 'red';
+        if (this.yINF < 808){
+            self.tuboInferior.setAttribute('class', 'obstaculo');
+            self.tuboInferior.setAttribute('id', "obstaculoInf")
+            self.tuboInferior.style.top = this.yINF + 'px';
+            self.tuboInferior.style.left = this.x + 'px';
+            self.tuboInferior.style.height = this.altObstaculoEspejo + 'px';
+        }
         board.appendChild(this.tuboInferior);
 
         //guaradamos los Obstaculos en un array para poderlos eliminar posteriormente
         this.sprite = [self.tuboSuperior, self.tuboInferior];
+        console.log(obstaculosArray)
+
     }
 
     this.moverObstaculos = function(){
@@ -70,9 +75,9 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
             self.yINF + self.height >= player.y && 
             self.yINF <= player.y + player.height)
             ){
-            console.log("Auuccchhhhh")
-            player.isDead = true
-            clearInterval(timerIdMoverObstaculos)
+        console.log("Auuccchhhhh")
+        player.isDead = true
+        clearInterval(timerIdMoverObstaculos)
         }
     }
 

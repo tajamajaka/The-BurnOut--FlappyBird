@@ -1,33 +1,55 @@
 body{
-    margin: 0;
-    display: flex;
+    margin-top: 5%;
+    margin-left: 40%;
+    background-color: rgb(81, 80, 80);
 }
 
-#board {
+#board{
     width: 700px;
     height: 800px;
-    background-color: black;
+    background-image: url(../Images/pixil-frame-0.png);
+    background-size: cover;
     margin: 0 auto;
+    border: 8px solid #b2b2b2;
+    border-radius: 8px;
     position: relative;
-    display: inline;
+    display: none; /*para que no me aparezca el juego en la primera pantalla*/
+
 }
 
 #player {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    background-color: white;
-    background-image: url(../images/player1.gif);
+    /*background-color: blue;*/
+    background-image: url('../Images/girl.png');
     background-size: cover;
-    z-index: 1;
+    z-index: 1
 }
 
 .obstaculo{
     width: 50px;
     height: 200px;
-    background-color: grey;
+    /*background-image: url(../Images/fire.png);*/
+    /*background-size: cover;*/
+    /* background-color: grey; */
     margin: 0 auto;
     position: absolute;
+}
+
+
+#obstaculoSup, #obstaculoInf {
+    background-repeat: repeat;
+    background-size: 120%;
+    background-position: bottom;
+}
+#obstaculoSup{
+    background-image: url('../Images/y8.gif');
+    transform: rotate(180deg);
+}
+
+#obstaculoInf{
+    background-image: url('../Images/y8.gif');
 }
 
 .marco{
@@ -38,3 +60,9 @@ body{
     display: inline;
 
 }
+/*#restart {
+    display: 'none';
+}*/ 
+
+/* El css de restart debería quitar el boton ese de 
+la pantalla pero no lo hace*/

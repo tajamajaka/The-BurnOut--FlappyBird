@@ -13,7 +13,7 @@ function Player (x, y, board) {
         this.sprite.setAttribute('id', 'player')
         this.sprite.style.top = this.y + 'px'
         this.sprite.style.left = this.x + 'px'
-        this.sprite.style.backgroundImage = 'url(../images/player1.gif)'
+        this.sprite.style.backgroundImage = 'url(../Images/girl.png)'
         board.appendChild(this.sprite)
     }
 
