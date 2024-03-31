@@ -1,9 +1,10 @@
 let board = document.getElementById('board');
 let marco = document.getElementsByClassName('marco');
-console.log(board)
+
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
+
 let start = document.getElementById('start');
 let buttonStart = document.getElementById('btn-start');
 let restart = document.getElementById('restart');
@@ -26,7 +27,7 @@ function playerMove(){
         player.move()
     }
     else{
-        console.log("borrar")
+        console.log("borrar timers")
         clearInterval(timerIdPlayer)
         clearInterval(timerIdMoverObstaculos)
         clearInterval(timerIdCrearObstaculo)

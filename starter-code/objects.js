@@ -37,8 +37,6 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
 
         //guaradamos los Obstaculos en un array para poderlos eliminar posteriormente
         this.sprite = [self.tuboSuperior, self.tuboInferior];
-        console.log(obstaculosArray)
-
     }
 
     this.moverObstaculos = function(){
