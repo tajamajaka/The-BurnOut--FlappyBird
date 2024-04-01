@@ -19,6 +19,12 @@ main{
     background-position: center;
 }
 
+#music{
+    position: absolute;
+    top: 61vh;
+
+}
+
 #board{
     width: 700px;
     height: 800px;
@@ -43,7 +49,7 @@ main{
 }
 
 .obstaculo{
-    width: 50px;
+    width: 150px;
     height: 200px;
     /* background-color: grey; */
     margin: 0 auto;
@@ -52,8 +58,8 @@ main{
 
 
 #obstaculoSup, #obstaculoInf {
-    background-repeat: repeat;
-    background-size: 140%;
+    /*background-repeat: repeat;*/
+    background-size: cover;
     background-position: bottom;
 }
 #obstaculoSup{

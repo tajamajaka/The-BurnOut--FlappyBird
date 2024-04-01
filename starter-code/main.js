@@ -6,7 +6,7 @@ let flap = document.getElementById("flap")
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
-
+let music = document.getElementById("music");
 let start = document.getElementById('start');
 let buttonStart = document.getElementById('btn-start');
 let restart = document.getElementById('restart');
@@ -18,10 +18,13 @@ let timerIdCrearObstaculo;
 let timerIdMoverObstaculos;
 let timerIdCrearObstaculos2;
 
+
 function startGame (){
     player.insertPlayer();
     timerIdPlayer = setInterval(playerMove, 100)
-    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 3000)
+    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 4000)
+    music.play();
+    
 }
 
 function playerMove(){
@@ -101,5 +104,6 @@ window.addEventListener("keyup", function(e) {
             break
     }
 })
+
 
 
