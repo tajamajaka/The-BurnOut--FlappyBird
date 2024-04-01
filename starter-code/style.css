@@ -6,7 +6,7 @@ body{
 
 main{
     position: relative;
-    background-color:azure;
+    /*background-color:azure;*/
     width: 700px;
     height: 800px;
     display: flex;
@@ -14,6 +14,7 @@ main{
     align-items: center;
     background-image: url('../Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
     background-size: cover;
+    
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -21,9 +22,9 @@ main{
 #board{
     width: 700px;
     height: 800px;
-    background-image: url(../Images/OIG1.QZVvJ.jpg);
-    background-size: cover;
-    margin: 0 auto;
+    background-image: url(../Images/fondo-board.webp);
+    background-size:cover;
+    background-position: center;
     border: 8px solid #b2b2b2;
     border-radius: 8px;
     position: relative;
@@ -64,10 +65,10 @@ main{
     background-image: url('../Images/y8.gif');
 }
 
-
+/* 
 /* El css de restart debería quitar el boton ese de 
 la pantalla pero no lo hace*/
-
+/* 
 #btn-start  , #btn-restart  {
     background: #723e4e;
     background-image: -webkit-linear-gradient(top, #723e4e, #ef3353);
@@ -93,12 +94,16 @@ la pantalla pero no lo hace*/
     background-image: -o-linear-gradient(top, #ef3353, #723e4e);
     background-image: linear-gradient(to bottom, #ef3353, #723e4e);
     text-decoration: none;
-  }
+  } 
+ */
 
-
-#btn-restart > img{
-    margin: 0 auto;
-    width: 75%;
+ #btn-start{
+    position: relative;
+    top: -24px;
+ }
+#btn-start > img{
+    width: 150px;
+    position: relative;
 }
 
 
