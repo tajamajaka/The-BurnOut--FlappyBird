@@ -24,12 +24,23 @@ function Player (x, y, board) {
             self.y = newCoordY;
             self.sprite.style.top = self.y + 'px';
         } 
-/*         
+        
         if (newCoordY >= 750){
             player.isDead = true
             clearInterval(timerIdPlayer)
+            clearInterval(timerIdMoverObstaculos)
+            clearInterval(timerIdCrearObstaculo)
+            clearInterval(timerIdCrearObstaculos2)
+            obstaculosArray.forEach(function(obstaculo){
+                clearInterval(obstaculo.timerIdMoverObstaculo)
+                clearInterval(obstaculo.timerIdMoverObstaculos)
 
-        } */
+        })
+        //alert("Game Over")
+        board.style.display = 'block'
+        restart.style.display = 'block'
+        song.play()
 
     }
+}
 }

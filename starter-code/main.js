@@ -1,6 +1,8 @@
 let board = document.getElementById('board');
 let marco = document.getElementsByClassName('marco');
-
+let song = document.getElementById("endgame")
+let score = 0
+let flap = document.getElementById("flap")
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
@@ -14,15 +16,16 @@ let buttonEnd = document.getElementById('btn-restart');
 let timerIdPlayer;
 let timerIdCrearObstaculo;
 let timerIdMoverObstaculos;
-
+let timerIdCrearObstaculos2;
 
 function startGame (){
     player.insertPlayer();
     timerIdPlayer = setInterval(playerMove, 100)
-    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 2000)
+    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 3000)
 }
 
 function playerMove(){
+    console.log("hola")
     if (player.isDead === false){
         player.move()
     }
@@ -36,20 +39,23 @@ function playerMove(){
             clearInterval(obstaculo.timerIdMoverObstaculo)
             clearInterval(obstaculo.timerIdMoverObstaculos)
         })
-
-        alert("Game Over")
-        board.style.display = 'none'
+      
+        console.log("hola")
+        //alert("Game Over")
+        board.style.display = 'block'
         restart.style.display = 'block'
+        
+        song.play()
     }
 }
 
 
 function crearObstaculo (){
     //calcula altura random obstaculo SUP:
-    var altObstaculo = (Math.floor(Math.random()* 600)) + 100
+    var altObstaculo = (Math.floor(Math.random()* 500)) 
     
     // calcula altura obstaculo INF:
-    var altObstaculoEspejo =  800 - altObstaculo - 100 
+    //var altObstaculoEspejo =  800 - altObstaculo - 100 
     
     //Obstaculo (x, y, width, height, board)
     let obstaculo = new Obstaculo(650, 0, 50, altObstaculo, board, obstaculosArray)
@@ -60,7 +66,6 @@ function crearObstaculo (){
 buttonStart.addEventListener('click', function(e){
     start.style.display = 'none' // Así una vez hagas click en el botón start, este desaparece
     board.style.display = 'block' //Una vez hago click en el botón start aparece el juego. 
-    restart.style.display = 'none'
     startGame ()
 })
 
@@ -83,6 +88,7 @@ buttonEnd.addEventListener('click', function(e){
 window.addEventListener("keydown", function(e) {
     switch(e.key){
         case "w":
+            flap.play()
             player.direction = -1
             break
     }

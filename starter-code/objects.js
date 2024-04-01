@@ -5,13 +5,14 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     this.width = width
     this.height = height
     this.espacio = 200
-    this.altObstaculoEspejo = (800 - this.height) - this.espacio
+    this.altObstaculoEspejo = (750 - this.height) - this.espacio
     this.yINF = this.height + this.espacio
     this.direction = -1
     this.speed = 10
     this.sprite
     this.tuboSuperior = document.createElement('div')
     this.tuboInferior = document.createElement('div')
+    this.score = document.getElementsByClassName("Puntuacion")
     
 
 
@@ -26,7 +27,7 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
         board.appendChild(this.tuboSuperior)
 
         // genera el div para el obstaculo INF
-        if (this.yINF < 808){
+        if (this.yINF < 800){
             self.tuboInferior.setAttribute('class', 'obstaculo');
             self.tuboInferior.setAttribute('id', "obstaculoInf")
             self.tuboInferior.style.top = this.yINF + 'px';
@@ -59,6 +60,10 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
         clearInterval(this.timerIdMoverObstaculos)
         board.removeChild(this.tuboSuperior)
         board.removeChild(this.tuboInferior)
+        score = score + 1
+        this.score[0].innerText = score
+        
+        
     }
 
     this.checkCollision = function(){

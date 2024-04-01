@@ -10,19 +10,24 @@
         <script src="main.js" defer> </script>
     </head>
     <body>
-        <div id="start">
-            <button id="btn-start">START</button>
-        </div>
-
-        <!-- <div class="marco"></div> -->
-        <main id="board">
-        
+        <main>
+            <div id="start">
+                <button id="btn-start">START</button>
+            </div>
+            <audio id="flap" src="../Audio/assets_audio_Main_sounds_flap.wav" ></audio>
+            <section id="board">
+                <span id= "suelo"> <img src="../Images/pixil-gif-drawing2.gif" alt=""> </span>
+                
+            </section>
+            
+            <div id="restart">
+                <button id="btn-restart">RESTART</button>
+                <p>Puntuación:  <span class = "Puntuacion"> 0
+                </span>
+                <audio id="endgame" src="../Audio/assets_audio_Main_sounds_hit.wav" ></audio>
+            </p>
+            </div>
         </main>
-        <!--<div class="marco"></div>-->
-        
-        <div id="restart">
-            <button id="btn-restart">RESTART</button>
-        </div>
 
     </body>
 </html>
