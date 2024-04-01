@@ -12,8 +12,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../Images/gratis-png-horno-de-lena-horno-de-mamposteria-stock-photography-pan-chimenea-de-ladrillo.png');
-    background-size: contain;
+    background-image: url('../Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
