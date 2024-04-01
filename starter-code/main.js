@@ -25,7 +25,6 @@ function startGame (){
 }
 
 function playerMove(){
-    console.log("hola")
     if (player.isDead === false){
         player.move()
     }
@@ -40,9 +39,9 @@ function playerMove(){
             clearInterval(obstaculo.timerIdMoverObstaculos)
         })
       
-        console.log("hola")
         //alert("Game Over")
         board.style.display = 'block'
+        board. style.filter = 'blur(4px)';
         restart.style.display = 'block'
         
         song.play()
@@ -58,7 +57,7 @@ function crearObstaculo (){
     //var altObstaculoEspejo =  800 - altObstaculo - 100 
     
     //Obstaculo (x, y, width, height, board)
-    let obstaculo = new Obstaculo(650, 0, 50, altObstaculo, board, obstaculosArray)
+    let obstaculo = new Obstaculo(610, 30, 150, altObstaculo, board, obstaculosArray)
     obstaculo.insertObstaculos()
     obstaculosArray.push(obstaculo)
 }

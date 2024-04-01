@@ -2,11 +2,20 @@ body{
     margin-top: 5%;
     margin-left: 40%;
     background-color: rgb(81, 80, 80);
+    position: relative;
 }
+#imagen-horno > img{
+    position: absolute;
+    height: 1425px;
+    width: 1200px;
+    left: -250px;
+    top: -100px;
+}
+
 
 main{
     position: relative;
-    /*background-color:azure;*/
+    background-color:azure;
     width: 700px;
     height: 800px;
     display: flex;
@@ -17,12 +26,12 @@ main{
     
     background-repeat: no-repeat;
     background-position: center;
-}
 
+}
 #board{
     width: 700px;
     height: 800px;
-    background-image: url(../Images/fondo-board.webp);
+    background-image: url(../Images/horno02.png);
     background-size:cover;
     background-position: center;
     border: 8px solid #b2b2b2;
@@ -53,7 +62,7 @@ main{
 
 #obstaculoSup, #obstaculoInf {
     background-repeat: repeat;
-    background-size: 140%;
+    background-size: cover;
     background-position: bottom;
 }
 #obstaculoSup{
@@ -113,8 +122,12 @@ la pantalla pero no lo hace*/
     width: 300px;
     height: 400px;
     margin: 0 auto;
-    background-image:url(../Images/pixil-frame-01.png) ;
     text-align: center;
+    background-image:url(../Images/horno01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+
   }
 
   #suelo > img{
@@ -127,3 +140,16 @@ la pantalla pero no lo hace*/
  /*  #btn-start{
       background-image:url('../Images/Start-button-sprite.png');
   } */
+
+
+
+
+
+#restart > p{
+    margin-top: 190px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(125,183,207);
+    text-shadow: 5px 17px 9px rgba(0, 0, 0, 1);
+    }
