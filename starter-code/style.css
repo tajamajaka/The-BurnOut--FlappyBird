@@ -4,16 +4,30 @@ body{
     background-color: rgb(81, 80, 80);
 }
 
+main{
+    position: relative;
+    background-color:azure;
+    width: 700px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #board{
     width: 700px;
     height: 800px;
-    background-image: url(../Images/pixil-frame-0.png);
+    background-image: url(../Images/OIG1.QZVvJ.jpg);
     background-size: cover;
     margin: 0 auto;
     border: 8px solid #b2b2b2;
     border-radius: 8px;
     position: relative;
-    display: none; /*para que no me aparezca el juego en la primera pantalla*/
+    display: none; /*para que no me aparezca el juego en la primera pantalla;*/
 
 }
 
@@ -22,32 +36,89 @@ body{
     height: 80px;
     position: absolute;
     /*background-color: blue;*/
-    background-image: url(../Images/girl.png);
+    background-image: url('../Images/girl.png');
     background-size: cover;
-    z-index: 1
+    z-index: 1;
 }
 
 .obstaculo{
     width: 50px;
     height: 200px;
-    /*background-image: url(../Images/fire.png);*/
-    /*background-size: cover;*/
-    background-color: grey;
+    /* background-color: grey; */
     margin: 0 auto;
     position: absolute;
 }
 
-.marco{
-    width: 33vw;
-    height: 800px;
-    background-color: green;
-    z-index: 1;
-    display: inline;
 
+#obstaculoSup, #obstaculoInf {
+    background-repeat: repeat;
+    background-size: 140%;
+    background-position: bottom;
 }
-/*#restart {
-    display: 'none';
-}*/ 
+#obstaculoSup{
+    background-image: url('../Images/y8.gif');
+    transform: rotate(180deg);
+}
+
+#obstaculoInf{
+    background-image: url('../Images/y8.gif');
+}
+
 
 /* El css de restart debería quitar el boton ese de 
 la pantalla pero no lo hace*/
+
+#btn-start  , #btn-restart  {
+    background: #723e4e;
+    background-image: -webkit-linear-gradient(top, #723e4e, #ef3353);
+    background-image: -moz-linear-gradient(top, #723e4e, #ef3353);
+    background-image: -ms-linear-gradient(top, #723e4e, #ef3353);
+    background-image: -o-linear-gradient(top, #723e4e, #ef3353);
+    background-image: linear-gradient(to bottom, #723e4e, #ef3353);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+ #btn-start:hover  , #btn-restart:hover {
+    background: #ef3353;
+    background-image: -webkit-linear-gradient(top, #ef3353, #723e4e);
+    background-image: -moz-linear-gradient(top, #ef3353, #723e4e);
+    background-image: -ms-linear-gradient(top, #ef3353, #723e4e);
+    background-image: -o-linear-gradient(top, #ef3353, #723e4e);
+    background-image: linear-gradient(to bottom, #ef3353, #723e4e);
+    text-decoration: none;
+  }
+
+
+#btn-restart > img{
+    margin: 0 auto;
+    width: 75%;
+}
+
+
+#restart{
+    position: absolute;
+    right: 25%;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background-image:url(../Images/pixil-frame-01.png) ;
+    text-align: center;
+  }
+
+  #suelo > img{
+    width: 700px;
+    position: relative;
+    top:750px
+
+  }
+
+ /*  #btn-start{
+      background-image:url('../Images/Start-button-sprite.png');
+  } */
