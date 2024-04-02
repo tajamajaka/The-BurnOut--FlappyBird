@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
         <script src="./player.js" defer> </script>
         <script src="./objects.js" defer></script>
         <script src="./main.js" defer> </script>
@@ -17,7 +17,7 @@
                 </audio>
                 <div id="start">
                     <button id="btn-start">
-                        <img src="./Images/pixel-art-metallic-style-start-button-icon-for-8bit-game-on-white-background-vector-ezgif.com-crop12.webp" alt="">
+                        <img src="./images/pixel-art-metallic-style-start-button-icon-for-8bit-game-on-white-background-vector-ezgif.com-crop12.webp" alt="">
                     </button>
                 </div>
                 <audio id="flap" src="./Audio/assets_audio_Main_sounds_flap.wav" ></audio>
@@ -25,15 +25,16 @@
                     <!-- <span id= "suelo"> <img src="../Images/pixil-gif-drawing2.gif" alt=""> </span> -->
                     
                 </section>
+                <div id="restart-background"></div>
                 
-                <div id="restart">
-                    <p>Puntuación:  <span class = "Puntuacion"> 0</p>
-                    <button id="btn-restart">
-                        <img src="./Images/pixil-frame-0(2).png" alt="">
-                    </button>
-                    </span>
-                    <audio id="endgame" src="./Audio/assets_audio_Main_sounds_hit.wav" ></audio>
-                </div>
+                    <div id="restart">
+                        <p>Score:<span class = "Puntuacion"> 0</p>
+                        <button id="btn-restart">
+                            <img src="./images/pixil-frame-0(2).png" alt="">
+                        </button>
+                        </span>
+                        <audio id="endgame" src="./Audio/assets_audio_Main_sounds_hit.wav" ></audio>
+                    </div>
             </main>
 
     </body>

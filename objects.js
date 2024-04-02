@@ -78,9 +78,8 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
             self.yINF + self.height >= player.y && 
             self.yINF <= player.y + player.height)
             ){
-        console.log("Auuccchhhhh")
         player.isDead = true
-        player.sprite.style.backgroundImage = "url('../Images/pollo asado.png')";
+        player.sprite.style.backgroundImage = "url('../images/pollo asado.png')";
         clearInterval(timerIdMoverObstaculos)
         }
     }

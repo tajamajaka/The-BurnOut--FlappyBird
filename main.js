@@ -39,7 +39,6 @@ function playerMove(){
         player.move()
     }
     else{
-        console.log("borrar timers")
         clearInterval(timerIdPlayer)
         clearInterval(timerIdMoverObstaculos)
         clearInterval(timerIdCrearObstaculo)

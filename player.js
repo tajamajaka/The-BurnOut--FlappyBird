@@ -13,7 +13,6 @@ function Player (x, y, board) {
         this.sprite.setAttribute('id', 'player')
         this.sprite.style.top = this.y + 'px'
         this.sprite.style.left = this.x + 'px'
-        this.sprite.style.backgroundImage = 'url(../Images/ezgif.com-animated-gif-maker.gif)'
         board.appendChild(this.sprite)
     }
 
