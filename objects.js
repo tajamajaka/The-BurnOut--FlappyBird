@@ -79,7 +79,7 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
             self.yINF <= player.y + player.height)
             ){
         player.isDead = true
-        player.sprite.style.backgroundImage = "url('./images/Pollo asado.png')";
+        player.sprite.style.backgroundImage = "url('./images/Pollo-asado.png')";
         clearInterval(timerIdMoverObstaculos)
         }
     }
