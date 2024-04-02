@@ -2,20 +2,11 @@ body{
     margin-top: 5%;
     margin-left: 40%;
     background-color: rgb(81, 80, 80);
-    position: relative;
 }
-#imagen-horno > img{
-    position: absolute;
-    height: 1425px;
-    width: 1200px;
-    left: -250px;
-    top: -100px;
-}
-
 
 main{
     position: relative;
-    background-color:azure;
+    /*background-color:azure;*/
     width: 700px;
     height: 800px;
     display: flex;
@@ -136,12 +127,6 @@ la pantalla pero no lo hace*/
     text-align: center;
   }
 
-  #suelo > img{
-    width: 700px;
-    position: relative;
-    top:750px
-
-  }
 
  /*  #btn-start{
       background-image:url('../Images/Start-button-sprite.png');
