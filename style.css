@@ -12,7 +12,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
+    background-image: url('./Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
     background-size: cover;
     
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ main{
 #board{
     width: 700px;
     height: 800px;
-    background-image: url(../Images/interiordehorno.png);
+    background-image: url('./Images/interiordehorno.png');
     background-size: 980px 1800px;
     background-position: 54%;
     border: 8px solid #b2b2b2;
@@ -43,7 +43,7 @@ main{
     height: 90px;
     position: absolute;
     /*background-color: blue;*/
-    background-image: url('../Images/girl.png');
+    background-image: url('./Images/girl.png');
     background-size: cover;
     z-index: 1;
 }
@@ -63,12 +63,12 @@ main{
     background-position: bottom;
 }
 #obstaculoSup{
-    background-image: url('../Images/y8.gif');
+    background-image: url('./Images/y8.gif');
     transform: rotate(180deg);
 }
 
 #obstaculoInf{
-    background-image: url('../Images/y8.gif');
+    background-image: url('./Images/y8.gif');
 }
 
 #btn-start{
