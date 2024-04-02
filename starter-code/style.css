@@ -4,43 +4,93 @@ body{
     background-color: rgb(81, 80, 80);
 }
 
-#board {
+main{
+    position: relative;
+    /*background-color:azure;*/
     width: 700px;
     height: 800px;
-    background-image: url(../Images/pixil-frame-0.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Images/139cee67-31a1-4d47-a841-35d297c1eab8.jpeg');
     background-size: cover;
-    margin: 0 auto;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#music{
+    position: absolute;
+    top: 61vh;
+
+}
+
+#board{
+    width: 700px;
+    height: 800px;
+    background-image: url(../Images/interiordehorno.png);
+    background-size: 980px 1800px;
+    background-position: 54%;
     border: 8px solid #b2b2b2;
     border-radius: 8px;
     position: relative;
-    display: inline;
+    display: none; /*para que no me aparezca el juego en la primera pantalla;*/
+
 }
 
 #player {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     position: absolute;
     /*background-color: blue;*/
-    background-image: url(../Images/girl.png);
+    background-image: url('../Images/girl.png');
     background-size: cover;
-    z-index: 1
+    z-index: 1;
 }
 
 .obstaculo{
-    width: 50px;
+    width: 150px;
     height: 200px;
-    /*background-image: url(../Images/fire.png);*/
-    /*background-size: cover;*/
-    background-color: grey;
+    /* background-color: grey; */
     margin: 0 auto;
     position: absolute;
 }
 
-.marco{
-    width: 33vw;
-    height: 800px;
-    background-color: green;
-    z-index: 1;
-    display: inline;
 
+#obstaculoSup, #obstaculoInf {
+    /*background-repeat: repeat;*/
+    background-size: cover;
+    background-position: bottom;
 }
+#obstaculoSup{
+    background-image: url('../Images/y8.gif');
+    transform: rotate(180deg);
+}
+
+#obstaculoInf{
+    background-image: url('../Images/y8.gif');
+}
+
+#btn-start{
+    position: relative;
+    top: -24px;
+ }
+
+#btn-start > img{
+    width: 150px;
+    position: relative;
+}
+
+#btn-restart > img{
+    width: 150px;
+}
+
+#restart{
+    position: absolute;
+    right: 28%;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+

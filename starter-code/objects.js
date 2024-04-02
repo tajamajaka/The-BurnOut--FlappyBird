@@ -5,13 +5,14 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     this.width = width
     this.height = height
     this.espacio = 200
-    this.altObstaculoEspejo = (800 - this.height) - this.espacio
+    this.altObstaculoEspejo = (770 - this.height) - this.espacio
     this.yINF = this.height + this.espacio
     this.direction = -1
     this.speed = 10
     this.sprite
     this.tuboSuperior = document.createElement('div')
     this.tuboInferior = document.createElement('div')
+    this.score = document.getElementsByClassName("Puntuacion")
     
 
 
@@ -19,17 +20,20 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
 
         // genera el div para el obstaculo SUP
         this.tuboSuperior.setAttribute('class', 'obstaculo')
+        this.tuboSuperior.setAttribute('id', 'obstaculoSup');
         this.tuboSuperior.style.top = this.y + 'px'
         this.tuboSuperior.style.left = this.x + 'px'
         this.tuboSuperior.style.height = this.height + 'px'
         board.appendChild(this.tuboSuperior)
 
         // genera el div para el obstaculo INF
-        self.tuboInferior.setAttribute('class', 'obstaculo');
-        self.tuboInferior.style.top = this.yINF + 'px';
-        self.tuboInferior.style.left = this.x + 'px';
-        self.tuboInferior.style.height = this.altObstaculoEspejo + 'px';
-        self.tuboInferior.style.backgroundColor = 'red';
+        if (this.yINF < 800){
+            self.tuboInferior.setAttribute('class', 'obstaculo');
+            self.tuboInferior.setAttribute('id', "obstaculoInf")
+            self.tuboInferior.style.top = this.yINF + 'px';
+            self.tuboInferior.style.left = this.x + 'px';
+            self.tuboInferior.style.height = this.altObstaculoEspejo + 'px';
+        }
         board.appendChild(this.tuboInferior);
 
         //guaradamos los Obstaculos en un array para poderlos eliminar posteriormente
@@ -56,6 +60,10 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
         clearInterval(this.timerIdMoverObstaculos)
         board.removeChild(this.tuboSuperior)
         board.removeChild(this.tuboInferior)
+        score = score + 1
+        this.score[0].innerText = score
+        
+        
     }
 
     this.checkCollision = function(){
@@ -70,9 +78,10 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
             self.yINF + self.height >= player.y && 
             self.yINF <= player.y + player.height)
             ){
-            console.log("Auuccchhhhh")
-            player.isDead = true
-            clearInterval(timerIdMoverObstaculos)
+        console.log("Auuccchhhhh")
+        player.isDead = true
+        player.sprite.style.backgroundImage = "url('../Images/pollo asado.png')";
+        clearInterval(timerIdMoverObstaculos)
         }
     }
 
