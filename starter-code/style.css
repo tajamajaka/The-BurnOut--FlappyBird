@@ -26,13 +26,20 @@ main{
     
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#music{
+    position: absolute;
+    top: 61vh;
 
 }
+
 #board{
     width: 700px;
     height: 800px;
-    background-image: url(../Images/horno02.png);
-    background-size:cover;
+
+    background-image: url(../Images/interiordehorno.png);
+    background-size: 980px 1800px;
     background-position: center;
     border: 8px solid #b2b2b2;
     border-radius: 8px;
@@ -42,8 +49,8 @@ main{
 }
 
 #player {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     position: absolute;
     /*background-color: blue;*/
     background-image: url('../Images/girl.png');
@@ -52,7 +59,7 @@ main{
 }
 
 .obstaculo{
-    width: 50px;
+    width: 150px;
     height: 200px;
     /* background-color: grey; */
     margin: 0 auto;
@@ -61,7 +68,7 @@ main{
 
 
 #obstaculoSup, #obstaculoInf {
-    background-repeat: repeat;
+    /*background-repeat: repeat;*/
     background-size: cover;
     background-position: bottom;
 }
@@ -106,28 +113,27 @@ la pantalla pero no lo hace*/
   } 
  */
 
- #btn-start{
+#btn-start{
     position: relative;
     top: -24px;
  }
+
 #btn-start > img{
     width: 150px;
     position: relative;
 }
 
+#btn-restart > img{
+    width: 150px;
+}
 
 #restart{
     position: absolute;
-    right: 25%;
+    right: 28%;
     width: 300px;
     height: 400px;
     margin: 0 auto;
     text-align: center;
-    background-image:url(../Images/horno01.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120%;
-
   }
 
   #suelo > img{
@@ -141,15 +147,3 @@ la pantalla pero no lo hace*/
       background-image:url('../Images/Start-button-sprite.png');
   } */
 
-
-
-
-
-#restart > p{
-    margin-top: 190px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: rgb(125,183,207);
-    text-shadow: 5px 17px 9px rgba(0, 0, 0, 1);
-    }

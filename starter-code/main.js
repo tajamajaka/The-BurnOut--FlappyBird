@@ -3,6 +3,7 @@ let marco = document.getElementsByClassName('marco');
 let song = document.getElementById("endgame")
 let score = 0
 let flap = document.getElementById("flap")
+let deadChicken = document.getElementById("deadChicken");
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
@@ -18,10 +19,19 @@ let timerIdCrearObstaculo;
 let timerIdMoverObstaculos;
 let timerIdCrearObstaculos2;
 
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    let music = document.getElementById("music");
+    music.play();
+    
+  });*/
+
 function startGame (){
     player.insertPlayer();
     timerIdPlayer = setInterval(playerMove, 100)
-    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 3000)
+    timerIdCrearObstaculos2 = setInterval(crearObstaculo, 4000)
+    music.play();
+    
 }
 
 function playerMove(){
@@ -51,7 +61,7 @@ function playerMove(){
 
 function crearObstaculo (){
     //calcula altura random obstaculo SUP:
-    var altObstaculo = (Math.floor(Math.random()* 500)) 
+    var altObstaculo = (Math.floor(Math.random()* 450)+50) 
     
     // calcula altura obstaculo INF:
     //var altObstaculoEspejo =  800 - altObstaculo - 100 
@@ -100,5 +110,6 @@ window.addEventListener("keyup", function(e) {
             break
     }
 })
+
 
 
