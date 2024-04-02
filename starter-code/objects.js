@@ -80,6 +80,7 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
             ){
         console.log("Auuccchhhhh")
         player.isDead = true
+        player.sprite.style.backgroundImage = "url('../Images/pollo asado.png')";
         clearInterval(timerIdMoverObstaculos)
         }
     }
