@@ -5,7 +5,7 @@ function Obstaculo (x, y, width, height, board, obstaculosArray) {
     this.width = width
     this.height = height
     this.espacio = 200
-    this.altObstaculoEspejo = (767 - this.height) - this.espacio
+    this.altObstaculoEspejo = (770 - this.height) - this.espacio
     this.yINF = this.height + this.espacio
     this.direction = -1
     this.speed = 10
