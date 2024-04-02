@@ -2,8 +2,8 @@ function Player (x, y, board) {
     let self = this
     this.x = x
     this.y = y
-    this.width = 50
-    this.height = 50
+    this.width = 70
+    this.height = 70
     this.direction = 0
     this.speed = 20
     this.sprite = document.createElement('div')
@@ -13,7 +13,7 @@ function Player (x, y, board) {
         this.sprite.setAttribute('id', 'player')
         this.sprite.style.top = this.y + 'px'
         this.sprite.style.left = this.x + 'px'
-        this.sprite.style.backgroundImage = 'url(../Images/girl.png)'
+        this.sprite.style.backgroundImage = 'url(../Images/ezgif.com-animated-gif-maker.gif)'
         board.appendChild(this.sprite)
     }
 

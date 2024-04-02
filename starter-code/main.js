@@ -6,7 +6,7 @@ let flap = document.getElementById("flap")
 //Argumentos Player (x, y, board)
 let player = new Player(100, 375, board);
 let obstaculosArray = []
-let music = document.getElementById("music");
+
 let start = document.getElementById('start');
 let buttonStart = document.getElementById('btn-start');
 let restart = document.getElementById('restart');
@@ -19,6 +19,12 @@ let timerIdMoverObstaculos;
 let timerIdCrearObstaculos2;
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    let music = document.getElementById("music");
+    music.play();
+    
+  });
+
 function startGame (){
     player.insertPlayer();
     timerIdPlayer = setInterval(playerMove, 100)
@@ -28,7 +34,6 @@ function startGame (){
 }
 
 function playerMove(){
-    console.log("hola")
     if (player.isDead === false){
         player.move()
     }
@@ -55,7 +60,7 @@ function playerMove(){
 
 function crearObstaculo (){
     //calcula altura random obstaculo SUP:
-    var altObstaculo = (Math.floor(Math.random()* 500)) 
+    var altObstaculo = (Math.floor(Math.random()* 450)+50) 
     
     // calcula altura obstaculo INF:
     //var altObstaculoEspejo =  800 - altObstaculo - 100 
