@@ -12,6 +12,7 @@ let start = document.getElementById('start');
 let buttonStart = document.getElementById('btn-start');
 let restart = document.getElementById('restart');
 restart.style.display = 'none'
+let restartBackground = document.getElementById("restart-background")
 let buttonEnd = document.getElementById('btn-restart');
 
 let timerIdPlayer;
@@ -51,6 +52,7 @@ function playerMove(){
         //alert("Game Over")
         board.style.display = 'block'
         restart.style.display = 'block'
+        restartBackground.style.display = 'block'
         
         song.play()
     }
